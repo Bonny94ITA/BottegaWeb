@@ -15,10 +15,6 @@ export const site = {
 
   /** Contatti — usati in header, contatti e footer. */
   email: "ciao@bottegaweb.it",
-  /** Telefono mostrato all'utente. */
-  phone: "+39 333 000 0000",
-  /** Telefono in formato link (solo cifre e +). */
-  phoneHref: "+393330000000",
   /** Numero WhatsApp in formato internazionale senza + e senza spazi. */
   whatsapp: "393330000000",
   /** Messaggio precompilato per WhatsApp. */

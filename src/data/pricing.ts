@@ -1,8 +1,11 @@
 /** Pacchetti mostrati in <Pricing />. Prezzi indicativi placeholder: adattali. */
 export type Plan = {
   name: string;
+  /** Costo di attivazione una tantum. */
   price: string;
   period: string;
+  /** Canone di manutenzione & hosting ricorrente (es. "+ 15€/mese"). */
+  monthly: string;
   description: string;
   features: string[];
   cta: string;
@@ -15,6 +18,7 @@ export const plans: Plan[] = [
     name: "Base",
     price: "da 390€",
     period: "una tantum",
+    monthly: "+ 15€/mese",
     description: "Per iniziare con una presenza online curata e professionale.",
     features: [
       "Sito vetrina one-page",
@@ -29,6 +33,7 @@ export const plans: Plan[] = [
     name: "Pro",
     price: "da 790€",
     period: "una tantum",
+    monthly: "+ 29€/mese",
     description: "Il pacchetto completo per farti trovare e far ordinare.",
     features: [
       "Tutto del piano Base",
@@ -45,6 +50,7 @@ export const plans: Plan[] = [
     name: "Su misura",
     price: "preventivo",
     period: "personalizzato",
+    monthly: "canone su misura",
     description: "Progetti specifici: e-commerce, gestionali, integrazioni.",
     features: [
       "Analisi dedicata",
@@ -56,6 +62,6 @@ export const plans: Plan[] = [
   },
 ];
 
-/** Servizio di gestione continuativa, mostrato sotto i pacchetti. */
+/** Cosa include il canone, mostrato sotto i pacchetti. */
 export const maintenanceNote =
-  "Assistenza e hosting gestiti da 15€/mese: aggiornamenti, sicurezza, backup e piccole modifiche incluse.";
+  "Il canone mensile include hosting, dominio gestito, aggiornamenti, sicurezza, backup e piccole modifiche: il tuo sito sempre curato. Nessun vincolo, disdici quando vuoi.";

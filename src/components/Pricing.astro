@@ -37,6 +37,12 @@ import { plans, maintenanceNote } from "../data/pricing";
             <span class="font-display text-4xl font-extrabold">{plan.price}</span>
             <span class="text-ink-400">{plan.period}</span>
           </div>
+          <p class={`mt-2 text-sm font-semibold ${plan.featured ? "text-brand-400" : "text-brand-600"}`}>
+            {plan.monthly}
+            <span class={`font-normal ${plan.featured ? "text-ink-300" : "text-ink-500"}`}>
+              · manutenzione & hosting
+            </span>
+          </p>
 
           <ul class="mt-6 space-y-3 text-sm">
             {plan.features.map((f) => (
