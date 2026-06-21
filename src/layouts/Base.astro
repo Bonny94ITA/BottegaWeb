@@ -71,7 +71,7 @@ const allLd = [organizationLd, ...jsonLd];
 
     {
       allLd.map((ld) => (
-        <script type="application/ld+json" is:inline set:html={JSON.stringify(ld)} />
+        <script type="application/ld+json" is:inline set:html={JSON.stringify(ld).replace(/</g, "\\u003c")} />
       ))
     }
 

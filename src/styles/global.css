@@ -65,6 +65,11 @@
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
   }
+  /* Niente reveal animato: il contenuto è subito visibile, mai nascosto. */
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }
 
 /* ----------------------------------------------------------------------------
