@@ -38,20 +38,25 @@
 /* ----------------------------------------------------------------------------
    Base
 ---------------------------------------------------------------------------- */
-html {
-  scroll-behavior: smooth;
-  /* Compensa l'header sticky quando si naviga alle ancore */
-  scroll-padding-top: 5rem;
-}
+/* In @layer base così le utility (es. text-white) possono sovrascrivere il
+   colore di default dei titoli: senza il layer queste regole "non-layered"
+   vincevano sempre, rendendo invisibili i titoli sulle sezioni scure. */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    /* Compensa l'header sticky quando si naviga alle ancore */
+    scroll-padding-top: 5rem;
+  }
 
-body {
-  font-family: var(--font-sans);
-  @apply bg-white text-ink-800 antialiased;
-}
+  body {
+    font-family: var(--font-sans);
+    @apply bg-white text-ink-800 antialiased;
+  }
 
-h1, h2, h3, h4 {
-  font-family: var(--font-display);
-  @apply tracking-tight text-ink-950;
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    @apply tracking-tight text-ink-950;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
