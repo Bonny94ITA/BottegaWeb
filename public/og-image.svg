@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1222"/>
+      <stop offset="1" stop-color="#1c2840"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="980" cy="120" r="220" fill="#f59e0b" opacity="0.18"/>
+  <circle cx="180" cy="560" r="200" fill="#4a6086" opacity="0.25"/>
+  <g transform="translate(90,150)">
+    <rect width="64" height="64" rx="16" fill="#f59e0b"/>
+    <text x="32" y="46" font-family="Verdana, sans-serif" font-size="38" font-weight="700" fill="#0b1222" text-anchor="middle">B</text>
+    <text x="84" y="46" font-family="Verdana, sans-serif" font-size="34" font-weight="700" fill="#ffffff">Bottega Web</text>
+  </g>
+  <text x="90" y="330" font-family="Verdana, sans-serif" font-size="64" font-weight="800" fill="#ffffff">Porta la tua attività</text>
+  <text x="90" y="408" font-family="Verdana, sans-serif" font-size="64" font-weight="800" fill="#f59e0b">online, senza complicazioni.</text>
+  <text x="90" y="480" font-family="Verdana, sans-serif" font-size="30" fill="#9bacc4">Siti web, menù digitali e visibilità per attività locali.</text>
+</svg>

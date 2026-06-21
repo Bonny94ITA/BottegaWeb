@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+/* ----------------------------------------------------------------------------
+   Design system — token centralizzati (Tailwind v4 @theme).
+   Cambia qui i colori/font del brand: si propagano a tutte le utility.
+---------------------------------------------------------------------------- */
+@theme {
+  /* Font (self-hosted via @fontsource per privacy/GDPR e performance) */
+  --font-sans: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Plus Jakarta Sans Variable", ui-sans-serif, system-ui, sans-serif;
+
+  /* Base scura (navy/indaco) */
+  --color-ink-50: #f5f7fa;
+  --color-ink-100: #e7ecf3;
+  --color-ink-200: #c7d2e0;
+  --color-ink-300: #9bacc4;
+  --color-ink-400: #6a80a1;
+  --color-ink-500: #4a6086;
+  --color-ink-600: #384b6c;
+  --color-ink-700: #2b3a55;
+  --color-ink-800: #1c2840;
+  --color-ink-900: #131d33;
+  --color-ink-950: #0b1222;
+
+  /* Accento caldo (ambra) — calore "da bottega" */
+  --color-brand-50: #fff8eb;
+  --color-brand-100: #ffedc6;
+  --color-brand-200: #ffd888;
+  --color-brand-300: #ffbf4a;
+  --color-brand-400: #fba521;
+  --color-brand-500: #f59e0b;
+  --color-brand-600: #d97706;
+  --color-brand-700: #b45309;
+  --color-brand-800: #92400e;
+  --color-brand-900: #78350f;
+}
+
+/* ----------------------------------------------------------------------------
+   Base
+---------------------------------------------------------------------------- */
+html {
+  scroll-behavior: smooth;
+  /* Compensa l'header sticky quando si naviga alle ancore */
+  scroll-padding-top: 5rem;
+}
+
+body {
+  font-family: var(--font-sans);
+  @apply bg-white text-ink-800 antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  @apply tracking-tight text-ink-950;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ----------------------------------------------------------------------------
+   Animazione "reveal" allo scroll (attivata da src/scripts/reveal.ts)
+---------------------------------------------------------------------------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
