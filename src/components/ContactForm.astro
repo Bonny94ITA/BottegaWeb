@@ -24,7 +24,7 @@ const keyConfigured = !site.web3formsKey.startsWith("REPLACE-");
         <a
           href={whatsappUrl}
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
           class="flex items-center gap-3 rounded-xl border border-white/10 bg-white/5 p-4 transition-colors hover:bg-white/10"
         >
           <span class="grid h-10 w-10 place-items-center rounded-full bg-emerald-500 text-white">
@@ -113,7 +113,7 @@ const keyConfigured = !site.web3formsKey.startsWith("REPLACE-");
         </label>
 
         <label class="mt-4 flex items-start gap-2.5 text-sm text-ink-500">
-          <input type="checkbox" required class="mt-1 h-4 w-4 rounded border-ink-300 text-brand-500" />
+          <input type="checkbox" name="privacy_consent" value="accettata" required class="mt-1 h-4 w-4 rounded border-ink-300 text-brand-500" />
           <span>Ho letto la <a href="/privacy" class="font-medium text-brand-600 underline-offset-2 hover:underline">privacy policy</a> e acconsento al trattamento dei dati.</span>
         </label>
 
@@ -163,8 +163,9 @@ const keyConfigured = !site.web3formsKey.startsWith("REPLACE-");
         headers: { Accept: "application/json" },
         body: new FormData(form),
       });
-      const data = await res.json();
-      if (res.ok && data.success) {
+      // Parsing isolato: una risposta non-JSON non deve sembrare un errore di rete.
+      const data = await res.json().catch(() => null);
+      if (res.ok && data?.success) {
         showStatus("Grazie! Ti ricontatteremo al più presto. ✅", true);
         form.reset();
       } else {
