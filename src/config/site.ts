@@ -43,4 +43,12 @@ export const whatsappUrl = `https://wa.me/${site.whatsapp}?text=${encodeURICompo
   site.whatsappMessage,
 )}`;
 
+/**
+ * Profili social effettivamente configurati (esclusi i placeholder "#").
+ * Usato per il JSON-LD `sameAs` e per i link del footer.
+ */
+export const activeSocials = Object.values(site.social).filter(
+  (href) => href && href !== "#",
+);
+
 export type Site = typeof site;

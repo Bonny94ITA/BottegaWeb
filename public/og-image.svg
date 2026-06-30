@@ -1,19 +1,63 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" font-family="'Plus Jakarta Sans','Inter',Verdana,sans-serif">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#0b1222"/>
       <stop offset="1" stop-color="#1c2840"/>
     </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffbf4a"/>
+      <stop offset="1" stop-color="#f59e0b"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#f59e0b" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#f59e0b" stop-opacity="0"/>
+    </radialGradient>
   </defs>
+
   <rect width="1200" height="630" fill="url(#bg)"/>
-  <circle cx="980" cy="120" r="220" fill="#f59e0b" opacity="0.18"/>
-  <circle cx="180" cy="560" r="200" fill="#4a6086" opacity="0.25"/>
-  <g transform="translate(90,150)">
-    <rect width="64" height="64" rx="16" fill="#f59e0b"/>
-    <text x="32" y="46" font-family="Verdana, sans-serif" font-size="38" font-weight="700" fill="#0b1222" text-anchor="middle">B</text>
-    <text x="84" y="46" font-family="Verdana, sans-serif" font-size="34" font-weight="700" fill="#ffffff">Bottega Web</text>
+  <circle cx="980" cy="120" r="320" fill="url(#glow)"/>
+  <circle cx="180" cy="600" r="220" fill="#4a6086" opacity="0.22"/>
+
+  <!-- dotted texture -->
+  <g fill="#ffffff" opacity="0.05">
+    <circle cx="90" cy="90" r="2"/><circle cx="130" cy="90" r="2"/><circle cx="170" cy="90" r="2"/>
+    <circle cx="90" cy="130" r="2"/><circle cx="130" cy="130" r="2"/><circle cx="170" cy="130" r="2"/>
   </g>
-  <text x="90" y="330" font-family="Verdana, sans-serif" font-size="64" font-weight="800" fill="#ffffff">Porta la tua attività</text>
-  <text x="90" y="408" font-family="Verdana, sans-serif" font-size="64" font-weight="800" fill="#f59e0b">online, senza complicazioni.</text>
-  <text x="90" y="480" font-family="Verdana, sans-serif" font-size="30" fill="#9bacc4">Siti web, menù digitali e visibilità per attività locali.</text>
+
+  <!-- logo -->
+  <g transform="translate(90,86)">
+    <rect width="60" height="60" rx="16" fill="url(#accent)"/>
+    <text x="30" y="43" font-size="36" font-weight="800" fill="#0b1222" text-anchor="middle">B</text>
+    <text x="80" y="42" font-size="32" font-weight="800" fill="#ffffff">Bottega Web</text>
+  </g>
+
+  <!-- headline -->
+  <text x="90" y="300" font-size="74" font-weight="800" fill="#ffffff">Porta la tua attività</text>
+  <text x="90" y="392" font-size="74" font-weight="800" fill="url(#accent)">online, senza complicazioni.</text>
+
+  <!-- subtitle -->
+  <text x="92" y="462" font-size="30" font-weight="500" fill="#c7d2e0">Siti web moderni, menù digitali e visibilità su Google</text>
+  <text x="92" y="502" font-size="30" font-weight="500" fill="#c7d2e0">per panetterie, bar, ristoranti e negozi di quartiere.</text>
+
+  <!-- chips -->
+  <g transform="translate(90,545)" font-size="21" font-weight="600">
+    <g>
+      <rect width="300" height="46" rx="23" fill="#ffffff" opacity="0.08"/>
+      <circle cx="28" cy="23" r="5" fill="#fba521"/>
+      <text x="46" y="30" fill="#e7ecf3">Pronto in 1–2 settimane</text>
+    </g>
+    <g transform="translate(324,0)">
+      <rect width="282" height="46" rx="23" fill="#ffffff" opacity="0.08"/>
+      <circle cx="28" cy="23" r="5" fill="#fba521"/>
+      <text x="46" y="30" fill="#e7ecf3">Nessun costo nascosto</text>
+    </g>
+    <g transform="translate(630,0)">
+      <rect width="240" height="46" rx="23" fill="#ffffff" opacity="0.08"/>
+      <circle cx="28" cy="23" r="5" fill="#fba521"/>
+      <text x="46" y="30" fill="#e7ecf3">Assistenza inclusa</text>
+    </g>
+  </g>
+
+  <!-- url -->
+  <text x="1110" y="588" font-size="24" font-weight="600" fill="#6a80a1" text-anchor="end">bottegaweb.it</text>
 </svg>

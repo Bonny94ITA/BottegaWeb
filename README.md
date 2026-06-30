@@ -97,3 +97,6 @@ certo è il **dominio (~8–15 €/anno)**.
 - Testi e prezzi sono **placeholder professionali** in italiano: personalizzali.
 - La pagina `/privacy` è un modello base: adattala ai dati reali prima di pubblicare.
 - Font self-hosted (`@fontsource`) per privacy/GDPR e performance.
+- L'anteprima social è `public/og-image.png` (1200×630). Il sorgente vettoriale
+  editabile è `public/og-image.svg`: modifica l'SVG e rigenera il PNG (le
+  piattaforme social non renderizzano l'SVG nelle anteprime).
